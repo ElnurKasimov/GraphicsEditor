@@ -12,4 +12,6 @@ abstract public class Shape implements Drawable, Removable, Fillable {
         return borderColor;
     }
 
+    abstract public String toString();
+
 }

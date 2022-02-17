@@ -1,7 +1,7 @@
 package GraphicsEditor;
 
 public class Circle  extends AnglelessShape implements Drawable, Removable, Fillable {
-    private int radius;
+    private final int radius;
 
     public Circle(int centreX, int centreY, int radius, int borderThick, String borderColor) {
         this.centreX = centreX;
@@ -15,7 +15,7 @@ public class Circle  extends AnglelessShape implements Drawable, Removable, Fill
     public void draw() {
         System.out.println("Нарисовали окружность с центом с координатами (" +
                     centreX + ", " + centreY +
-                    " радиусом " + radius + " толщиной " + borderThick + " цветом " + borderColor);
+                    "), радиусом " + radius + ", толщиной " + borderThick + ", цветом " + borderColor);
     }
 
     @Override
@@ -31,6 +31,10 @@ public class Circle  extends AnglelessShape implements Drawable, Removable, Fill
     @Override
     public void unfill() {
         System.out.println("Опустошили наполненность данной окружности");
+    }
+    @Override
+    public String toString() {
+        return "Эта фигура - Круг";
     }
 }
 

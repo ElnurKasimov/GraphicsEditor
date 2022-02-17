@@ -30,4 +30,5 @@ abstract public class AnglelessShape extends Shape  {
         return this.borderColor;
     }
 
+    abstract public String toString() ;
 }

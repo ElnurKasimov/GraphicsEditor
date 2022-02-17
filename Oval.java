@@ -1,8 +1,8 @@
 package GraphicsEditor;
 
 public class Oval extends AnglelessShape implements Drawable, Removable, Fillable {
-    private int semiMajorAxis;
-    private int semiMinorAxis;
+    private final int semiMajorAxis;
+    private final int semiMinorAxis;
 
     public Oval(int centreX, int centreY, int semiMajorAxis, int semiMinorAxis, int borderThick, String colour) {
         this.centreX = centreX;
@@ -17,8 +17,8 @@ public class Oval extends AnglelessShape implements Drawable, Removable, Fillabl
     public void draw() {
         System.out.println("Нарисовали овал с центом с координатами (" +
                     centreX + ", " + centreY +
-                    " большой полуосью " + semiMajorAxis + " малой полуосью " + semiMinorAxis
-                    + " толщиной " + borderThick + " цветом " + borderColor);
+                    "), большой полуосью " + semiMajorAxis + ", малой полуосью " + semiMinorAxis
+                    + ", толщиной " + borderThick + ", цветом " + borderColor);
     }
 
     @Override
@@ -34,6 +34,11 @@ public class Oval extends AnglelessShape implements Drawable, Removable, Fillabl
     @Override
     public void unfill() {
         System.out.println("Опустошили наполненность данного овала");
+    }
+
+    @Override
+    public String toString() {
+        return "Эта фигура - Овал";
     }
 }
 

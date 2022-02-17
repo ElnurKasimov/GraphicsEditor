@@ -8,4 +8,6 @@ abstract public class AngleShape extends Shape  {
  public int[][] getVertexes() {
   return vertexes;
  }
+
+ abstract public String toString();
 }

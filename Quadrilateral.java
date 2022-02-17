@@ -1,7 +1,7 @@
 package GraphicsEditor;
 
 public class Quadrilateral extends AngleShape implements Drawable, Removable, Fillable {
-    private Line[] sides = new Line[4];
+    private final Line[] sides = new Line[4];
 
     public Quadrilateral(int[][] vertexes, int borderThick, String borderColor) {
         if (vertexes.length != 4) { throw new MyIllegalArgumentException("Число вершин для треугольника не соответствует 4-м");}
@@ -45,5 +45,11 @@ public class Quadrilateral extends AngleShape implements Drawable, Removable, Fi
     public void unfill() {
         System.out.println("Опустошили наполненность данного четырехугольника");
     }
+
+    @Override
+    public String toString() {
+        return "Эта фигура - Четырехугольник";
+    }
+
 }
 
