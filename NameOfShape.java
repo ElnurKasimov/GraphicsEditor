@@ -7,8 +7,8 @@ public class NameOfShape {
         this.shape = shape;
     }
 
-    public Shape getShape() {
-        return shape;
+    public String get(Shape shape) {
+        return shape.name;
     }
 
 }

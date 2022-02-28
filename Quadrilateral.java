@@ -3,7 +3,8 @@ package GraphicsEditor;
 public class Quadrilateral extends AngleShape implements Drawable, Removable, Fillable {
     private final Line[] sides = new Line[4];
 
-    public Quadrilateral(int[][] vertexes, int borderThick, String borderColor) {
+    public Quadrilateral(String name, int[][] vertexes, int borderThick, String borderColor) {
+        this.name = name;
         if (vertexes.length != 4) { throw new MyIllegalArgumentException("Число вершин для треугольника не соответствует 4-м");}
         this.vertexes = vertexes;
         this.borderThick = borderThick;

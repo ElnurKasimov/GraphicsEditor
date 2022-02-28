@@ -3,7 +3,8 @@ package GraphicsEditor;
 public class Triangle extends AngleShape implements Drawable, Removable, Fillable {
     private final Line[] sides = new Line[3]; //  Вопрос 1. Почему во всех окончтельных класса IDEA рекомендует сделать все private поля final?
 
-    public Triangle(int[][] vertexes, int borderThick, String borderColor) {
+    public Triangle(String name, int[][] vertexes, int borderThick, String borderColor) {
+        this.name = name;
         if (vertexes.length != 3) { throw new MyIllegalArgumentException("Число вершин для треугольника не соответствует 3-м");}
         this.vertexes = vertexes;
         this.borderThick = borderThick;

@@ -6,7 +6,8 @@ public class Polygon extends AngleShape implements Drawable, Removable, Fillable
     private int dimension;
     private final Line[] sides = new Line[dimension];
 
-    public Polygon(int[][] vertexes, int dimension, int borderThick, String borderColor) {
+    public Polygon(String name, int[][] vertexes, int dimension, int borderThick, String borderColor) {
+        this.name = name;
         if (vertexes.length != dimension || vertexes.length == 0) { throw new MyIllegalArgumentException("Число " +
                 "вершин для этого много-угольника не сответствует размерности массива вершин");}
         this.dimension = dimension;

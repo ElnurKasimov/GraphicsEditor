@@ -8,22 +8,22 @@ public class GraphicsEditorTest {
 
     public static void main(String[] args) {
         ArrayList<Shape> face = new ArrayList<>();
-        face.add(new Oval(10, 170, 40, 20, 2, "black"));
-        face.add(new Oval(240, 170, 40, 20, 2, "grey"));
-        face.add(new Circle(90, 160, 20, 2, "blue"));
-        face.add(new Circle(170, 160, 20, 2, "light blue"));
+        face.add(new Oval("Oval", 10, 170, 40, 20, 2, "black"));
+        face.add(new Oval("Oval", 240, 170, 40, 20, 2, "grey"));
+        face.add(new Circle("Circle", 90, 160, 20, 2, "blue"));
+        face.add(new Circle("Circle", 170, 160, 20, 2, "light blue"));
         int[][] triangleVertexes = {{100, 130}, {160, 130}, {130, 180}};
-        face.add(new Triangle(triangleVertexes, 2, "green"));
+        face.add(new Triangle("Triangle", triangleVertexes, 2, "green"));
         int[][] quadriVertexes = {{80, 60}, {190, 60}, {190, 100}, {80, 100}};
-        face.add(new Quadrilateral(quadriVertexes, 2, "red"));
+        face.add(new Quadrilateral("Quadrilateral", quadriVertexes, 2, "red"));
         int[][] polygonVertexes = {{80, 0}, {170, 0}, {220, 100}, {220, 190}, {180, 230}, {70, 230}, {30, 190}, {30, 100}};
-        face.add(new Polygon(polygonVertexes, 8, 2, "pink"));
+        face.add(new Polygon("Polygon", polygonVertexes, 8, 2, "pink"));
         //for (int i = 0; i < face.size(); i++) { face.get(i).draw();}
         Stream<Shape> streamShape = face.stream();
         streamShape.forEach( Shape :: draw);
         for (Shape shape : face) {
             NameOfShape nameOfShape = new NameOfShape(shape);
-            System.out.println(nameOfShape.getShape().toString());
+            System.out.println(nameOfShape.get(shape));
             //System.out.println(NameOfShape.getNameOfShape()); }
         }
     }

@@ -4,7 +4,8 @@ public class Oval extends AnglelessShape implements Drawable, Removable, Fillabl
     private final int semiMajorAxis;
     private final int semiMinorAxis;
 
-    public Oval(int centreX, int centreY, int semiMajorAxis, int semiMinorAxis, int borderThick, String colour) {
+    public Oval(String name, int centreX, int centreY, int semiMajorAxis, int semiMinorAxis, int borderThick, String colour) {
+        this.name = name;
         this.centreX = centreX;
         this.centreY = centreY;
         this.semiMajorAxis = semiMajorAxis;

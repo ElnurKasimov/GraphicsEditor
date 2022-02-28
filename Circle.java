@@ -3,7 +3,8 @@ package GraphicsEditor;
 public class Circle  extends AnglelessShape implements Drawable, Removable, Fillable {
     private final int radius;
 
-    public Circle(int centreX, int centreY, int radius, int borderThick, String borderColor) {
+    public Circle(String name, int centreX, int centreY, int radius, int borderThick, String borderColor) {
+        this.name = name;
         this.centreX = centreX;
         this.centreY = centreY;
         this.radius = radius;
