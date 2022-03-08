@@ -23,8 +23,8 @@ public class GraphicsEditorTest {
         streamShape.forEach( Shape :: draw);
         for (Shape shape : face) {
             NameOfShape nameOfShape = new NameOfShape(shape);
-            System.out.println(nameOfShape.get(shape));
-            //System.out.println(NameOfShape.getNameOfShape()); }
+            System.out.println("Вызываемая фигура - " + nameOfShape.get(shape));
+            // nameOfShape.printClassName(shape);
         }
     }
 }

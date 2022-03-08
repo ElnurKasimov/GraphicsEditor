@@ -9,5 +9,5 @@ abstract public class AngleShape extends Shape  {
   return vertexes;
  }
 
- abstract public String toString();
+ //abstract public String toString();
 }
